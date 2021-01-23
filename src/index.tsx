@@ -42,6 +42,7 @@ const MoonIcon = ({ isClicked, ...props }) => {
       toValue: isClicked ? 1 : 0,
       duration: transitionTime,
       easing: Easing.inOut(Easing.linear),
+      useNativeDriver: false,
     }).start();
   }, [isClicked]);
 
@@ -102,6 +103,7 @@ const DayNightSwitch = ({ isClicked }) => {
     Animated.timing(value.current, {
       toValue: isClicked ? 1 : 0,
       duration: transitionTime,
+      useNativeDriver: false,
     }).start();
   }, [isHovered, isClicked]);
 
@@ -109,6 +111,7 @@ const DayNightSwitch = ({ isClicked }) => {
     Animated.timing(scaleValue.current, {
       toValue: isActive ? 1.03 : isHovered ? 1.05 : 1,
       duration: transitionTime,
+      useNativeDriver: false,
     }).start();
   }, [isActive, isHovered]);
 
@@ -181,6 +184,7 @@ const Stars = ({ isClicked, ...props }) => {
     Animated.timing(value.current, {
       toValue: isClicked ? 1 : 0,
       duration: transitionTime,
+      useNativeDriver: false,
     }).start();
   }, [isClicked]);
 
@@ -215,6 +219,7 @@ const Circle = ({ isClicked, ...props }) => {
     Animated.timing(value.current, {
       toValue: isClicked ? 1 : 0,
       duration: transitionTime,
+      useNativeDriver: false,
     }).start();
   }, [isClicked]);
 
